@@ -1,5 +1,7 @@
 package org.pasudo123.todo
 
+import org.pasudo123.todo.domain.MyTodo
+import org.pasudo123.todo.repository.TodoRepository
 import org.slf4j.LoggerFactory
 import org.springframework.boot.CommandLineRunner
 import org.springframework.boot.autoconfigure.SpringBootApplication
@@ -14,8 +16,13 @@ class TodoApplication {
     private val log = LoggerFactory.getLogger(TodoApplication::class.java)
 
     @Bean
-    fun init() = CommandLineRunner {
+    fun init(todoRepository: TodoRepository) = CommandLineRunner {
         log.info("[custom] commandLineRunner Start!")
+        todoRepository.save(MyTodo(todo = "study java"))
+        todoRepository.save(MyTodo(todo = "study kotlin"))
+        todoRepository.save(MyTodo(todo = "study c++"))
+        todoRepository.save(MyTodo(todo = "study javascript"))
+        todoRepository.save(MyTodo(todo = "study golang"))
     }
 }
 

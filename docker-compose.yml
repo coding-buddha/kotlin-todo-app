@@ -7,7 +7,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=rootpass
       - MYSQL_ROOT_HOST=%
-      - MYSQL_DATABASE=todo
+      - MYSQL_DATABASE=testdb
     container_name: mysql-for-todo
     ports:
       - 13308:3306
