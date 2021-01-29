@@ -17,6 +17,13 @@ repositories {
 }
 
 dependencies {
+    // swagger
+    implementation("io.springfox:springfox-swagger-ui:3.0.0")   // version 일치가 되어야 한다.
+    implementation("io.springfox:springfox-swagger2:3.0.0")
+    implementation("org.springdoc:springdoc-openapi-ui:1.5.0")  // version 일치가 되어야 한다.
+    implementation("org.springdoc:springdoc-openapi-data-rest:1.5.0")
+    implementation("org.springdoc:springdoc-openapi-kotlin:1.5.0")
+
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("mysql:mysql-connector-java")
 
